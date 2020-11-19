@@ -17,7 +17,6 @@ import javax.swing.JTextField;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.border.EmptyBorder;
-
 import com.repairAutoCar.model.models.Usuario;
 import com.repairAutoCar.model.service.UsuarioService;
 
@@ -97,7 +96,6 @@ public class UsuarioGUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				excluirUsuario();
 			}
-
 			
 		});
 		btnSair = new JButton("Sair");
@@ -125,6 +123,7 @@ public class UsuarioGUI extends JFrame {
 				buscarUsuario();
 			}			
 		});
+		
 		textCodigo.setColumns(10);		
 		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
