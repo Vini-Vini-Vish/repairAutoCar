@@ -68,8 +68,7 @@ public class UsuarioService extends ConexaoBancoService {
 			}
 		} else {
 			toReturn = VariaveisProjeto.CAMPO_VAZIO;
-		}
-		
+		}		
 		return toReturn;
 	}
 	
@@ -97,8 +96,7 @@ public class UsuarioService extends ConexaoBancoService {
 			}
 		
 		return toReturn;
-	}
-	
+	}	
 	
 	public Usuario findById(Integer id) {
 		return this.getUsuarioDao().findById(id);
