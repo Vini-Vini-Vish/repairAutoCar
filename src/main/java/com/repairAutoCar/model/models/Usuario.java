@@ -19,6 +19,14 @@ public class Usuario {
 	private String email;
 	private String password;
 	
+	// Teste de inserção de dados do cadastro
+	private Integer cpf;	
+	private Integer agencia;
+	private Integer conta;
+	private Integer operacao;
+	private Integer codigoBanco;	
+	//	
+	
 	private boolean ativo = true;
 	private boolean admin = false;
 	
@@ -56,6 +64,50 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	//----------------------------------------------
+	// Teste de processamento de dados do cadastro
+	//----------------------------------------------
+	@Column(name = "CPF_USER", length = 12, unique = true)
+	public Integer getCpf() {
+		return cpf;
+	}
+	public void setCpf(Integer cpf) {
+		this.cpf = cpf;
+	}
+	//----------------------------------------------
+	@Column(name = "Agency_USER")
+	public Integer getAgencia() {
+		return agencia;
+	}
+	public void setAgencia(Integer agencia) {
+		this.agencia = agencia;
+	}
+	//----------------------------------------------
+	@Column(name = "NUMBER_CONT")
+	public Integer getConta() {
+		return conta;
+	}
+	public void setConta(Integer conta) {
+		this.conta = conta;
+	}
+	//----------------------------------------------
+	@Column(name = "OPERACION_CONT")
+	public Integer getOperacao() {
+		return operacao;
+	}
+	public void setOperacao(Integer operacao) {
+		this.operacao = operacao;
+	}
+	//----------------------------------------------
+	@Column(name = "COD_BANK")
+	public Integer getCodigoBanco() {
+		return codigoBanco;
+	}
+	public void setCodigoBanco(Integer codigoBanco) {
+		this.codigoBanco = codigoBanco;
+	}
+	//----------------------------------------------
+	// Fim teste 
 	//----------------------------------------------
 	@Column(nullable = false)
 	public boolean isAtivo() {
@@ -101,7 +153,8 @@ public class Usuario {
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", username=" + username + ", email=" + email + ", password=" + password
-				+ ", ativo=" + ativo + ", admin=" + admin + "]";
+				+ ", ativo=" + ativo + ", admin=" + admin + ", cpf =" + cpf +", agencia=" + agencia +", "
+						+ "conta=" + conta +", operacao=" + operacao +", codigoBanco =" + codigoBanco +"]";
 	}
 	//----------------------------------------------	
 }
