@@ -76,8 +76,7 @@ public class UsuarioService extends ConexaoBancoService {
 		
 		Integer toReturn =0;
 		
-		EntityTransaction trx = this.getTransaction();
-		
+		EntityTransaction trx = this.getTransaction();		
 		
 			try {
 				trx.begin();
